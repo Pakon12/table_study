@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add these lines to your HTML file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img\logo.jpg" alt="">
+            </div>
+            <div>
+                <!-- Add these buttons in your HTML -->
+                <button id="saveTableDataBtn">Save Data</button>
+            </div>
+            <div class="nav-size-font">
+                <select name="fontsize" id="fontsize">
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16" selected>16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                    <option value="26">26</option>
+                    <option value="28">28</option>
+                    <option value="30">30</option>
+                    <option value="32">32</option>
+                </select>
+            </div>
+            <div class="nav-export">
+                <button id="exportBtn">Export File</button>
+            </div>
+            <div class="nav-select">
+                <label for="excelFileInput">Choose File</label>
+                <input type="file" id="excelFileInput" />
+            </div>
+
+            <div class="nav-read">
+                <button onclick="importData()">Read Excel File</button>
+            </div>
+            <div class="nav-name">
+                <div class="stage">
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                    <div class="layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contianer">
+        <div class="car-table">
+            <table id="excelTable" style="width:100%">
+                <thead>
+
+                </thead>
+                <tbody>
+                    <!-- Add rows and cells dynamically using JavaScript -->
+                </tbody>
+
+            </table>
+        </div>
+        <div class="car-analy">
+            <div class="data-circle">
+                <div>
+                    <h4>แสดงจำนวนการเช็กชื่อ</h4>
+                    <div id="countContainer"></div>
+                    <canvas id="attendanceDoughnutChart"></canvas>
+                </div>
+            </div>
+            <div class="show-data">
+                <div class="card-show-ma">
+                    <h3>Ranking:(มา)</h3>
+                    <div id="scoll-table-ma">
+                        <table id="Table-ma">
+                            <!-- add row ที่ มาเยอะที่สุด -->
+                        </table>
+                    </div>
+                </div>
+                <div class="card-show-kad">
+                    <h3>Ranking:(ขาดบอดๆ)</h3>
+                    <div id="scoll-table-ma">
+                        <table id="Table-kad">
+                            <!-- add row ที่ ขาดเยอะที่สุด -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
